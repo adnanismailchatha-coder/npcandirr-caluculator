@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPV & IRR Calculator (Formula Explained)</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h2>💰 NPV & IRR Financial Calculator</h2>
+        
+        <label for="discountRate">Required Rate of Return (as a decimal, e.g., 0.10 for 10%):</label>
+        <input type="number" id="discountRate" step="0.001" value="0.10">
+
+        <p>Enter 5 Cash Flows (CF0 should be the initial investment, usually negative):</p>
+        
+        <div class="cashflow-inputs">
+            <label for="cf0">CF0 (Initial Investment):</label>
+            <input type="number" id="cf0" value="-10000">
+            <label for="cf1">CF1:</label>
+            <input type="number" id="cf1" value="3000">
+            <label for="cf2">CF2:</label>
+            <input type="number" id="cf2" value="4000">
+            <label for="cf3">CF3:</label>
+            <input type="number" id="cf3" value="5000">
+            <label for="cf4">CF4:</label>
+            <input type="number" id="cf4" value="2000">
+        </div>
+
+        <div class="button-group">
+            <button onclick="calculateNPV()">Calculate & Explain NPV</button>
+            <button onclick="calculateIRR()">Calculate & Explain IRR</button>
+        </div>
+
+        <div class="result-box">
+            <p id="result">Results will appear here with the full explanation.</p>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
